@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "gcp-build": "strapi build"
   },
   "devDependencies": {},
   "dependencies": {
@@ -34,7 +35,7 @@
     "uuid": "65a63598-9256-4615-9bfb-20c22ced798a"
   },
   "engines": {
-    "node": ">=10.16.0 <=14.x.x",
+    "node": "14.*.*",
     "npm": "^6.0.0"
   },
   "license": "MIT"
