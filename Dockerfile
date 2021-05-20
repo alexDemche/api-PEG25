@@ -4,7 +4,6 @@ FROM node:12-slim
 
 # Create and change to the app directory.
 WORKDIR /usr/src/app
-
 ENV NODE_ENV=production
 
 # Copy application dependency manifests to the container image.
