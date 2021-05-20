@@ -1,4 +1,4 @@
-name: strapi-cloud-run
+name: nextjs-cloud-run
 
 on:
   push:
@@ -7,10 +7,10 @@ on:
       - main
 
 env:
-  CLOUD_RUN_PROJECT_ID: ${{ secrets.GCP_PROJECT }}
+  CLOUD_RUN_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
   CLOUD_RUN_REGION: asia-northeast1
   # project-name but it can be anything you want
-  REPO_NAME: nextjs-google-cloud
+  REPO_NAME: api-peg25
 
 jobs:
   build-and-deploy:
