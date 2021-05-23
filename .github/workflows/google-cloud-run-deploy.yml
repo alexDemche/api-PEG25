@@ -11,11 +11,6 @@ env:
   CLOUD_RUN_REGION: europe-west1
   # project-name but it can be anything you want
   REPO_NAME: api-peg25
-  # database secrets
-  DATABASE_NAME: ${{ secrets.DATABASE_NAME }}
-  DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
-  DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
-  DATABASE_HOST: ${{ secrets.DATABASE_HOST }}
 
 jobs:
   build-and-deploy:
