@@ -3,7 +3,6 @@ name: strapi-cloud-run
 on:
   push:
     branches:
-      - master
       - main
 
 env:
