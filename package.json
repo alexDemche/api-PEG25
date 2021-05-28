@@ -31,7 +31,7 @@
     "strapi-utils": "3.6.2"
   },
   "author": {
-    "name": "A Strapi developer test"
+    "name": "A Strapi developer"
   },
   "strapi": {
     "uuid": "65a63598-9256-4615-9bfb-20c22ced798a"
