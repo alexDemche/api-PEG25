@@ -2,6 +2,7 @@
   "name": "api-peg-25",
   "private": true,
   "version": "0.0.0-development",
+  "repository": "https://github.com/alexDemche/api-PEG25",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
