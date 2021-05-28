@@ -1,7 +1,7 @@
 {
   "name": "api-peg-25",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
@@ -10,7 +10,9 @@
     "strapi": "strapi",
     "clean": "rm -rf node_modules/ build/ .tmp/ .cache/ exports/"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "semantic-release": "^17.4.3"
+  },
   "dependencies": {
     "knex": "^0.95.5",
     "sqlite3": "^5.0.2",
