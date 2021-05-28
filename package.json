@@ -41,5 +41,12 @@
     "node": ">=10.16.0 <=14.x.x",
     "npm": ">=6.0.0"
   },
+  "release": {
+    "branches": [
+      "main",
+      "next",
+      "beta"
+    ]
+  },
   "license": "MIT"
 }
