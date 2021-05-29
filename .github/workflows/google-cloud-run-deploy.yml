@@ -16,19 +16,26 @@ jobs:
     # automating Semantic Versioning
     name: Release
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          node-version: "12.x"
+          node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm run build --if-present
-      - run: npm run test --if-present
+      - run: npm test --if-present
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+  # Builds and deploy to google cloud run
   build-and-deploy:
     name: Setup, Build, and Deploy
     runs-on: ubuntu-latest
@@ -54,12 +61,15 @@ jobs:
           gcloud services enable containerregistry.googleapis.com
           gcloud services enable run.googleapis.com
           gcloud --quiet auth configure-docker
+
       - name: Build and tag image
         run: |-
           docker build . --tag "gcr.io/$CLOUD_RUN_PROJECT_ID/$REPO_NAME:$GITHUB_SHA"
+
       - name: Push image to GCR
         run: |-
           docker push gcr.io/$CLOUD_RUN_PROJECT_ID/$REPO_NAME:$GITHUB_SHA
+
       - name: Deploy
         run: |-
           gcloud components install beta --quiet
