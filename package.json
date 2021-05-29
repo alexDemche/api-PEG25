@@ -1,9 +1,8 @@
 {
   "name": "api-peg-25",
-  "private": true,
   "version": "0.0.0-development",
+  "description": "A Strapi cms application with MongoDB database and google cloud run deployment",
   "repository": "https://github.com/alexDemche/api-PEG25",
-  "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -32,7 +31,7 @@
     "strapi-utils": "3.6.2"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "alexDemche"
   },
   "strapi": {
     "uuid": "65a63598-9256-4615-9bfb-20c22ced798a"
