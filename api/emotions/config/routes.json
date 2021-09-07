@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/colors",
-      "handler": "colors.find",
+      "path": "/emotions",
+      "handler": "emotions.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/colors/count",
-      "handler": "colors.count",
+      "path": "/emotions/count",
+      "handler": "emotions.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/colors/:id",
-      "handler": "colors.findOne",
+      "path": "/emotions/:id",
+      "handler": "emotions.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/colors",
-      "handler": "colors.create",
+      "path": "/emotions",
+      "handler": "emotions.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/colors/:id",
-      "handler": "colors.update",
+      "path": "/emotions/:id",
+      "handler": "emotions.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/colors/:id",
-      "handler": "colors.delete",
+      "path": "/emotions/:id",
+      "handler": "emotions.delete",
       "config": {
         "policies": []
       }

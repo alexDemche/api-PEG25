@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "posts",
+  "collectionName": "categories",
   "info": {
-    "name": "posts",
+    "name": "categories",
     "description": ""
   },
   "options": {
@@ -15,7 +15,10 @@
     "title": {
       "type": "string"
     },
-    "img": {
+    "description": {
+      "type": "richtext"
+    },
+    "icon": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -26,6 +29,10 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "emotions": {
+      "collection": "emotions",
+      "via": "category"
     }
   }
 }
