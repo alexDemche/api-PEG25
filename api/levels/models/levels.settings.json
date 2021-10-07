@@ -13,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {}
     },
     "toPoints": {
-      "type": "integer"
+      "type": "integer",
+      "pluginOptions": {}
     },
     "icon": {
       "model": "file",
@@ -31,7 +33,8 @@
       "pluginOptions": {}
     },
     "number": {
-      "type": "integer"
+      "type": "integer",
+      "pluginOptions": {}
     }
   }
 }
